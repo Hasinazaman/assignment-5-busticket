@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Landing Page.</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- tailwind and daisy ui cdn link -->
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="w-4/5 mx-auto">
+ <!-- navbar start-->
+
+ <div class="navbar bg-base-100">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+         
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+        </ul>
+      </div>
+      <a class="btn btn-ghost text-xl text-[#030712]">p-Ticket</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a>Home</a></li>
+        <li>
+            <a>About</a>
+        </li>
+        <li><a>Destination</a></li>
+        <li><a>Search</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a class="btn bg-green-100 text-green-500">Bus <img src="images/bus-icon.png" alt=""></a>
+    </div>
+  </div>
+
+<!-- navbar end-->
+
+<!-- banner start -->
+
+<div class="hero min-h-screen rounded-2xl my-4" style="background-image: url(images/banner.png)">
+  <div class="hero-overlay bg-opacity-60"></div>
+  <div class="hero-content text-center text-neutral-content">
+    <div class="max-w-md">
+      <h1 class="mb-5 text-4xl font-extrabold">End-to-End Travel With</h1>
+      <h1 class="text-5xl text-green-600 font-extrabold mb-5">P Paribahan</h1>
+      <p class="mb-5">Yes, you can run unit tests and view the results directly within the app.The integrated testing features allow for a streamlined.</p>
+      <button class="btn bg-green-500 ">Buy Tickets</button>
+    </div>
+  </div>
+</div>
+
+<!-- banner end -->
+    </header>
+
+    <main class="w-4/5 mx-auto bg-[#f7f8f8]">
+      <section class="my-16">
+        <!-- best offer start -->
+
+        <div class="flex flex-col md:flex-row gap-8 my-12">
+
+          <!-- 15% off card -->
+          <div class="flex rounded-2xl bg-[#ffbf0f] p-8 gap-x-2 w-1/2">
+
+            <div class="space-y-4 w-4/6">
+              <h1 class="text-4xl font-extrabold">15% OFF</h1>
+              <h4 class="text-2xl text-gray-700 font-bold">on your next purchase</h4>
+              <p class="text-base text-gray-500">use by January 2024</p>
+            </div>
+            
+            <div class="space-y-4 w-2/6 pt-8">
+              <h1 class="text-4xl font-extrabold">NEW15</h1>
+              <p class="text-gray-500 text-xl">Coupon Code</p>
+            </div>
+
+          </div>
+
+<!-- 20% off card -->
+
+<div class="flex rounded-2xl bg-[#ffbf0f] p-8 w-1/2">
+
+  <div class="space-y-4 w-4/6">
+    <h1 class="text-4xl font-extrabold">20% OFF</h1>
+    <h4 class="text-2xl text-gray-700 font-bold">on your next purchase</h4>
+    <p class="text-base text-gray-500">use by January 2024</p>
+  </div>
+
+  <div class="space-y-4 w-2/6 pt-8">
+    <h1 class="text-4xl font-extrabold">NEW15</h1>
+    <p class="text-gray-500 text-xl">Coupon Code</p>
+  </div>
+
+</div>
+
+        </div>
+       
+        <div class="text-center">
+          <button class="text-[#1dd100] text-2xl rounded-xl font-extrabold border-green-500 border-solid border-2 p-5">See All Offers</button>
+        </div>
+
+      </section>
+<!-- best offer end -->
+
+          
+      <!-- seat or per seat price section start -->
+      <section class="bg-white shadow-2xl rounded-xl">
+
+      <div class="flex flex-col md:flex-row gap-5 rounded-xl p-8">
+
+        <div class="w-5/6 space-y-4 ">
+              <!-- seat count down div -->
+              <div class="flex justify-between ">
+
+                <div class="flex space-x-3 h-2/3">
+                  <img src="images/bus-logo.png" alt="">
+                 <div class="">
+                  <h1 class="text-3xl  font-extrabold text-[#030712] ">Greenline Paribahan</h1>
+                  <p class="text-base">Coach-009-WEB!Ac_Business</p>
+                 </div>
+                </div>
+      
+                <div class="flex bg-green-200 rounded-lg p-5 space-x-3">
+                  <img class="" src="images/seat-green.png" alt="">
+                  <button class= "text-[#1dd100] text-xl">  40 Seats left</button>
+                </div>
+              </div>
+      <!-- shadow area ------------ -->
+              <div class="shadow-md rounded-lg bg-gray-100 space-y-8 p-12">
+
+                           <!-- input type area -->
+              <div class="flex justify-between h-2/3  ">
+                <div><p class="text-xl text-[#030712]">Route</p></div>
+                <div><p class="text-xl text-[#030712] font-bold">Dhaka - Sylhet</p></div>
+              </div>
+      <hr class="border-dashed border-2">
+              <div class="flex justify-between  ">
+                <div><p class="text-xl text-[#030712]">Departure Time</p></div>
+                <div><p class="text-xl text-[#030712] font-bold">9.00 PM</p></div>
+              </div>
+      <hr class="border-dashed border-2">
+              <div class="flex justify-between gap-x-4">
+                <div><p class="rounded-xl bg-gray-200 p-5 text-base font-semibold">Boarding Point-Laximpur</p></div>
+                <div><p class="rounded-xl bg-gray-200 p-5 text-base font-semibold">Dropping Point-Bogura</p></div>
+                <div><p class="rounded-xl bg-gray-200 p-5 text-base font-semibold">Est.Time-11 Hour</p></div>
+              </div>
+
+              </div>
+              
+        </div>
+  
+        <!-- 550 taka area -->
+       <div class="w-2/6 relative text-center">
+        <div class=" absolute top-32 right-12 ">
+          <img src="images/fare.png" class="w-12 h-12" alt=""><br>
+            <h1 class="text-4xl font-extrabold">550 Taka <br> <span class="text-2xl opacity-40">Per Seat</span></h1>
+          </div>
+      
+       </div>
+      </div>
+
+      </section>
+   <!-- seat or per seat price section end-->
+
+      <!-- select your seat start -->
+
+      <section class="bg-white rounded-xl shadow-2xl my-24">
+
+        <div class="flex flex-col md:flex-row gap-6">
+
+          <div>
+
+            
+                  <!-- seat area -->
+          <div class="grid grid-cols-4 gap-x-4">
+            <p>A1</p>
+            <p>A2</p>
+            <p>A3</p>
+            <p>A4</p>
+            <p>B1</p>
+            <p>B2</p>
+            <p>B3</p>
+            <p>B4</p>
+
+
+          </div>
+          </div>
+
+
+          <!-- add price area -->
+
+          <div></div>
+
+
+        </div>
+      </section>
+
+      <!-- select your seat end -->
+
+
+    </main>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
