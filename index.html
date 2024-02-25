@@ -131,7 +131,7 @@
       
                 <div class="flex bg-green-200 rounded-lg p-5 space-x-3">
                   <img class="" src="images/seat-green.png" alt="">
-                  <button class= "text-[#1dd100] text-xl">  40 Seats left</button>
+                  <button class= "text-[#1dd100] text-xl"><span id="seat-down">8  </span> Seats left</button>
                 </div>
               </div>
       <!-- shadow area ------------ -->
@@ -159,10 +159,10 @@
         </div>
   
         <!-- 550 taka area -->
-       <div class="w-2/6 relative text-center">
+       <div class="w-2/6 relative">
         <div class=" absolute top-32 right-12 ">
           <img src="images/fare.png" class="w-12 h-12" alt=""><br>
-            <h1 class="text-4xl font-extrabold">550 Taka <br> <span class="text-2xl opacity-40">Per Seat</span></h1>
+            <h1 class="text-4xl font-extrabold"><span id="ticket-price">550  </span> Taka <br> <span class="text-2xl opacity-40">Per Seat</span></h1>
           </div>
       
        </div>
@@ -175,42 +175,121 @@
 
       <section class="bg-white rounded-xl shadow-2xl my-24">
 
-        <div class="flex flex-col md:flex-row gap-6">
+        <div class="flex flex-col md:flex-row gap-6 p-6">
 
-          <div>
+          <div class="w-4/6 space-y-6">
+
+            <!-- select header are -->
+            <h1 class="text-[#030712] font-semibold text-2xl">Select Your Seat</h1>
 
             
-                  <!-- seat area -->
-          <div class="grid grid-cols-4 gap-x-4">
-            <p>A1</p>
-            <p>A2</p>
-            <p>A3</p>
-            <p>A4</p>
-            <p>B1</p>
-            <p>B2</p>
-            <p>B3</p>
-            <p>B4</p>
+            <hr class="divide-dashed divide-2">
 
+
+            <div class="flex justify-between ">
+
+              <div class="flex space-x-3">
+                <img src="images/seat-gray.png" alt="">
+                <h1 class="text-xl font-bold opacity-50">Available</h1>
+              </div>
+
+              <div class="flex space-x-3">
+                <img src="images/seat-green-filled.png" alt="">
+                <h1 class="text-xl font-bold text-[#1dd100]">Selected</h1>
+              </div>
+
+            </div>
+
+            
+            <hr class="divide-dashed divide-2">
+
+            <div class="flex justify-end pr-5  items-center bg-[#f7f8f8] ">
+            <img src="images/wheel.png" alt="">
+            </div>
+            
+                  <!-- seat area here start-->
+          <div class="grid grid-cols-5  gap-4">
+
+            <p>A</p>
+            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">A1</p>
+            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">A2</p>
+            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">A3</p>
+            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">A4</p>
+            <p>B</p>
+            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">B1</p>
+            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">B2</p>
+            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">B3</p>
+            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">B4</p>
 
           </div>
           </div>
-
+             <!-- seat area here end-->
 
           <!-- add price area -->
 
-          <div></div>
+          <div class="w-2/6 space-y-6">
 
+            <h1 class="text-[#030712] font-semibold text-2xl">Select Your Seat</h1>
+
+            <hr class="divide-dashed divide-2">
+
+            <div class="flex justify-between">
+
+              <!-- seat count 1 add -->
+              <div class="text-base font-medium">Seat <span id="seat-up"  class="bg-[#1dd100] text-white font-bold rounded-lg text-sm py-1 px-2">0</span></div>
+
+              <div class="text-base font-medium">Class</div>
+
+              <div class="text-base font-medium">Price</div>
+
+            </div>
+
+            <!-- extra some items push here -->
+            <div id="select-bus-price" ></div>
+
+            <!-- total price add here start-->
+            <div class="flex justify-between">
+
+              <p class="text-base font-medium text-[#030712]">Total Price</p>
+
+              <button class="text-base font-medium text-[#030712]">BDT  <span id="total-price" >0</span></button>
+            
+            </div>
+               <!-- total price add here end-->
+
+            <!-- coupon code area here start -->
+            <div class="coupon-code flex justify-between">
+              <input id ="coupon-code" type="text" placeholder="Have any coupon?">
+              <button id="apply-btn" class="apply-btn bg-[#1dd100] px-4 py-2 items-center rounded-lg text-white">Apply</button>
+            </div>
+              <!-- coupon code area here end-->
+            <hr class="divide-dashed divide-2">
+
+            <!-- grand total area here start -->
+            <div class="flex justify-between">
+
+              <p class="text-base font-medium text-[#030712]">Grand Total</p>
+
+              <button  class="text-base font-medium text-[#030712]">BDT  <span id="grand-total">0</span></button>
+            
+            </div>
+            <!-- grand total area here end -->
+          </div>
 
         </div>
       </section>
 
       <!-- select your seat end -->
 
-
     </main>
 
-    
+    <!-- footer area here start -->
+    <footer>
 
-    <script src="script.js"></script>
+    </footer>
+    <!-- footer area here end -->
+    <!-- add javascript file here -->
+    <script src="script3.js"></script>
+    <script src="script1.js"></script>
 </body>
 </html>
