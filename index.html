@@ -208,18 +208,18 @@
             </div>
             
                   <!-- seat area here start-->
-          <div class="grid grid-cols-5  gap-4">
+          <div class="grid grid-cols-5 text-center gap-4 ">
 
             <p>A</p>
-            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">A1</p>
-            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">A2</p>
-            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">A3</p>
-            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">A4</p>
+            <p class="add-btn"  class=" text-base opacity- rounded-md shadow-lg p-3 ">A1</p>
+            <p class="add-btn"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 ">A2</p>
+            <p class="add-btn"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 ">A3</p>
+            <p class="add-btn"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 ">A4</p>
             <p>B</p>
-            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">B1</p>
-            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">B2</p>
-            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">B3</p>
-            <p class="seat"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 text-center">B4</p>
+            <p class="add-btn"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 ">B1</p>
+            <p class="add-btn"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 ">B2</p>
+            <p class="add-btn"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 ">B3</p>
+            <p class="add-btn"  class="bg-[#f7f8f8] text-base opacity-50 rounded-md shadow-lg p-3 ">B4</p>
 
           </div>
           </div>
@@ -245,22 +245,25 @@
             </div>
 
             <!-- extra some items push here -->
-            <div id="select-bus-price" ></div>
+            <div id="select-bus-price" >
+              <p id="demo"></p>
+            </div>
+            <hr class="divide-dashed divide-2">
 
             <!-- total price add here start-->
             <div class="flex justify-between">
 
               <p class="text-base font-medium text-[#030712]">Total Price</p>
 
-              <button class="text-base font-medium text-[#030712]">BDT  <span id="total-price" >0</span></button>
+              <button class="text-base font-medium text-[#030712]">BDT  <span id="total-cost" >0</span></button>
             
             </div>
                <!-- total price add here end-->
 
             <!-- coupon code area here start -->
-            <div class="coupon-code flex justify-between">
+            <div  class="coupon-code flex justify-between">
               <input id ="coupon-code" type="text" placeholder="Have any coupon?">
-              <button id="apply-btn" class="apply-btn bg-[#1dd100] px-4 py-2 items-center rounded-lg text-white">Apply</button>
+              <button onclick="updateGrandTotal('apply-btn')" id="apply-btn" class="apply-btn bg-[#1dd100] px-4 py-2 items-center rounded-lg text-white">Apply</button>
             </div>
               <!-- coupon code area here end-->
             <hr class="divide-dashed divide-2">
@@ -274,6 +277,9 @@
             
             </div>
             <!-- grand total area here end -->
+
+            <!-- next button -->
+            <button class="btn btn-block bg-[#1dd100] text-white">next</button>
           </div>
 
         </div>
@@ -289,7 +295,7 @@
     </footer>
     <!-- footer area here end -->
     <!-- add javascript file here -->
-    <script src="script3.js"></script>
-    <script src="script1.js"></script>
+  
+    <script src="script.js"></script>
 </body>
 </html>

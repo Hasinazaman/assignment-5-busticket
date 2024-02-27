@@ -1,87 +1,117 @@
-// seat or seat count work here
-// const allSeat = document.getElementsByClassName('seat');
+// button add
 
-// // let count = 0;
+const allBtn = document.getElementsByClassName('add-btn');
 
-// for (const seat of allSeat) {
-   
-//     seat.addEventListener('click', function (event) {
+for(const btn of allBtn){
+  btn.addEventListener('click', function (event) {
 
-//         count = count + 1;
+    const name = event.target.innerText;
 
-//        const seatName = event.target.innerText;
+    const price = document.getElementById('ticket-price').innerText;
+        
+const selectContainer = document.getElementById("select-bus-price");
 
-//        console.log(event.target )
+// update seat down under the zero
+// const zeroCartCount = getConvertedValue('seat-down');
+//     if (fourCartCount + 1 > 4 ||  zeroCartCount + 1 < 0  ) {
+//       alert('not valid under zero');
+//       return;
+//     }
 
-//         setInnerText('seat-up', count);
-         
-//     });
-// }
 
-// function setInnerText(id, value) {
-//     document.getElementById(id).innerText = value;
-// }
+// update 4 seat is not take 
+const fourCartCount = getConvertedValue('seat-up');
+    if (fourCartCount + 1 > 4) {
+      alert('limit shes');
+      return;
+    }
 
-// now
-const allSeat = document.getElementsByClassName('seat');
 
-for (const seat of allSeat) {
-   
-    seat.addEventListener('click', function (event) {
+// one time after button is dissabled
+    event.target.setAttribute('disabled', false);
+event.target.style.backgroundColor = '#1dd100';
+event.target.style.color = 'white';
 
-      const seat = event.target.innerText;
 
-//       const economy = document.createElement("p");
-//       const node = document.createTextNode("economy");
-//       economy.appendChild(node);
-//       const element = document.getElementById("select-bus-price");
-// element.appendChild(economy); 
+// update seat count
+const seatUp = getConvertedValue("seat-up");
+document.getElementById("seat-up").innerText = seatUp + 1; 
 
-            
-      const price = document.getElementById('ticket-price').innerText;
-     console.log(price);
+// update seat down 
+const seatDown = getConvertedValue("seat-down");
+document.getElementById("seat-down").innerText = seatDown - 1; 
 
-      const emptyContainer = document.getElementById('select-bus-price')
 
-      const div = document.createElement('div');
-      div.classList.add('flex');
-      div.classList.add('justify-between');
+const div = document.createElement('div');
+div.classList.add('flex');
+div.classList.add('justify-between');
 
-      const p1 =document.createElement('p')
-    //   const p2 =document.createElement('p')
-      const p3 =document.createElement('p')
+const p1 = document.createElement('p');
 
-        p1.innerText = seat;
-        // p2.innerText = economy;
-        p3.innerText = price;
+const p2 = document.createElement('p');
+const node = document.createTextNode("economy");
+p2.appendChild(node);
 
-        div.appendChild(p1)
-        // div.appendChild(p2)
-        div.appendChild(p3)
+const element = document.getElementById("demo");
+element.appendChild(p2);
 
-        emptyContainer.appendChild(div);
+const p3 = document.createElement('p');
 
-        updateTotalCost('price')
-         
-    });
+
+p1.innerText = name;
+p3.innerText = price;
+
+div.appendChild(p1);
+div.appendChild(p2)
+div.appendChild(p3);
+
+selectContainer.appendChild(div);
+
+
+// function caall
+updateTotalCost(price);
+updateGrandTotal();
+
+  });
 }
 
-function updateTotalCost(price) {
-    const totalCost = getConvertedValue('total-price');
+// function 4
 
-    const convertedPrice = parseInt(price);
 
-    const sum = totalCost + convertedPrice;
+// function 3
+function updateGrandTotal(status){
 
-    document.getElementById('total-price').innerText = sum;
+  const totalCost = getConvertedValue('total-cost');
 
+  if(status == undefined) {
+  
+    document.getElementById('grand-total').innerText = totalCost;
+    
+  } else {
+      const couponCode = document.getElementById("coupon-code").value;
+        
+      if(couponCode == 'NEW15' || couponCode == 'COUPLE20') {
+        const discounted = totalCost * 0.2;
+        document.getElementById('grand-total').innerText = totalCost - discounted;
+      } 
+      else {
+        alert('please enter valid coupon code')
+      }
+    
+  }
 }
 
-
-
-function getConvertedValue (id) {
-    const price = document.getElementById(id).innerText;
-    const convertPrice = parseInt(price);
-    return convertPrice;
+// function 2
+function updateTotalCost(value){
+  const totalCost = getConvertedValue('total-cost');
+  const convertedPrice = parseInt(value);
+  const sum = totalCost + convertedPrice;
+  document.getElementById('total-cost').innerText = sum;
 }
 
+// function 1
+function getConvertedValue(id){
+  const price = document.getElementById(id).innerText;
+  const convertPrice = parseInt(price);
+  return convertPrice;
+}
