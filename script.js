@@ -11,14 +11,6 @@ for(const btn of allBtn){
         
 const selectContainer = document.getElementById("select-bus-price");
 
-// update seat down under the zero
-// const zeroCartCount = getConvertedValue('seat-down');
-//     if (fourCartCount + 1 > 4 ||  zeroCartCount + 1 < 0  ) {
-//       alert('not valid under zero');
-//       return;
-//     }
-
-
 // update 4 seat is not take 
 const fourCartCount = getConvertedValue('seat-up');
     if (fourCartCount + 1 > 4) {
@@ -115,3 +107,5 @@ function getConvertedValue(id){
   const convertPrice = parseInt(price);
   return convertPrice;
 }
+
+
